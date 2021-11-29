@@ -25,14 +25,14 @@ public class User implements IUser {
     public int isValid() {
         // 0. Check for Email Empty
         // 1. Check for Email Match pattern
-        // 2. Check for Password > 12
+        // 2. Check for Password > 8
         if (TextUtils.isEmpty(getEmail()))
             return 0;
         else if (!Patterns.EMAIL_ADDRESS.matcher(getEmail()).matches())
             return 1;
         else if (TextUtils.isEmpty(getPassword()))
             return 2;
-        else if (getPassword().length() <= 12)
+        else if (getPassword().length() <= 8)
             return 3;
         else
             return -1;
