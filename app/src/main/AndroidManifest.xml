@@ -20,6 +20,6 @@
         </activity>
         <activity android:name="com.example.course_project_tot.CalendarActivity"/>
         <activity android:name="com.example.course_project_tot.CreateGoalActivity"/>
-        <activity android:name="com.example.course_project_tot.Pomodoro"/>
+        <activity android:name="com.example.course_project_tot.Ucontroller.PomodoroController"/>
     </application>
 </manifest>

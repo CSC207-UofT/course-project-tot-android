@@ -1,4 +1,4 @@
-package com.example.course_project_tot;
+package com.example.course_project_tot.Ucontroller;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,9 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.course_project_tot.R;
+import com.example.course_project_tot.UModel.PomodoroModel;
+
 import java.util.Locale;
 
-public class Pomodoro extends AppCompatActivity {
+public class PomodoroController extends AppCompatActivity {
     private static final long START_TIME_IN_MILLIS = 1200000;
 
     private TextView mTextViewCountDown;
@@ -19,8 +22,7 @@ public class Pomodoro extends AppCompatActivity {
     private Button mButtonReset;
 
     private CountDownTimer mCountDownTimer;
-
-    private boolean mTimerRunning;
+    private PomodoroModel pomodoro = new PomodoroModel();
 
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
 
@@ -37,7 +39,7 @@ public class Pomodoro extends AppCompatActivity {
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mTimerRunning) {
+                if (pomodoro.getStatus()) {
                     pauseTimer();
                 } else {
                     startTimer();
@@ -64,14 +66,14 @@ public class Pomodoro extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                mTimerRunning = false;
+                pomodoro.turnOff();
                 mButtonStartPause.setText("Start");
                 mButtonStartPause.setVisibility(View.INVISIBLE);
                 mButtonReset.setVisibility(View.VISIBLE);
             }
         }.start();
 
-        mTimerRunning = true;
+        pomodoro.turnOn();
         mButtonStartPause.setText("pause");
         mButtonReset.setVisibility(View.INVISIBLE);
 
@@ -79,7 +81,7 @@ public class Pomodoro extends AppCompatActivity {
 
     private void pauseTimer() {
         mCountDownTimer.cancel();
-        mTimerRunning = false;
+        pomodoro.turnOff();
         mButtonStartPause.setText("Start");
         mButtonReset.setVisibility(View.VISIBLE);
 

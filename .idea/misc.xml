@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_calendar.xml" value="0.11875" />
-        <entry key="app/src/main/res/layout/activity_chart.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_calendar.xml" value="0.5642661177636997" />
+        <entry key="app/src/main/res/layout/activity_chart.xml" value="0.22671733343817008" />
+        <entry key="app/src/main/res/layout/activity_create_goal.xml" value="0.25677083333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30581567152119105" />
         <entry key="app/src/main/res/layout/activity_pomodoro.xml" value="0.11875" />
       </map>
