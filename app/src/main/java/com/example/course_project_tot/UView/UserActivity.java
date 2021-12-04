@@ -1,4 +1,4 @@
-package com.example.course_project_tot;
+package com.example.course_project_tot.UView;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,10 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.course_project_tot.CalendarActivity;
+import com.example.course_project_tot.R;
 import com.example.course_project_tot.Ucontroller.ILoginController;
 import com.example.course_project_tot.Ucontroller.LoginController;
 import com.example.course_project_tot.UView.ILoginView;
-public class MainActivity extends AppCompatActivity  implements ILoginView {
+public class UserActivity extends AppCompatActivity  implements ILoginView {
     EditText email,password;
     Button loginb;
     ILoginController loginPresenter;
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity  implements ILoginView {
     @Override
     public void OnLoginSuccess(String message) {
         Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this,CalendarActivity.class);
+        Intent intent = new Intent(this, CalendarActivity.class);
         startActivity(intent);
     }
     @Override
