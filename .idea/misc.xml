@@ -3,11 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_calendar.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_calendar.xml" value="0.5109983079526227" />
         <entry key="app/src/main/res/layout/activity_chart.xml" value="0.22671733343817008" />
         <entry key="app/src/main/res/layout/activity_create_goal.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30581567152119105" />
-        <entry key="app/src/main/res/layout/activity_pomodoro.xml" value="0.11875" />
+        <entry key="app/src/main/res/layout/activity_pomodoro.xml" value="0.335" />
       </map>
     </option>
   </component>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">course-project-tot</string>
+    <string name="detailed_description">Detailed Description</string>
+    <string name="create_goal">Create Goal</string>
+    <string name="goal">Goal</string>
+    <string name="time_hours">Time (Hours)</string>
 </resources>
