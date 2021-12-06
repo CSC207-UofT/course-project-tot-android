@@ -6,38 +6,30 @@ import com.example.course_project_tot.View.ILoginView;
 
 public class LoginController implements ILoginController {
     ILoginView loginView;
+    UserList userList;
+    public static User activeUser;
 
-    public LoginController(ILoginView loginView){
+    public LoginController(ILoginView loginView) {
         this.loginView = loginView;
+        userList = new UserList(); // TODO: This should be read from a file
     }
 
     @Override
     public void OnLogin(String email, String password) {
-        if (UserList.getInstance().contains(email)) {
-            User user = UserList.getInstance().getUser(email);
-            if (user.getPassword().equals(password)) {
-                loginView.OnLoginSuccess("Successfully logged in.");
-                UserList.getInstance().setCurrentUser(user);
-            } else {
-                loginView.OnLoginError("Incorrect password.");
-            }
+        User user = new User(email, password); // TODO: This should be retrieved from the userList
+        int loginCode = user.isValid();
+        if (loginCode == 0) {
+            loginView.OnLoginError("Please enter Email");
+        } else if (loginCode == 1) {
+            loginView.OnLoginError("Please enter A valid Email");
+        } else if (loginCode == 2) {
+            loginView.OnLoginError("Please enter Password");
+        } else if (loginCode == 3) {
+            loginView.OnLoginError("Please enter Password greater the 12 char");
         } else {
-            User user = new User(email, password);
-            int loginCode = user.isValid();
-            if (loginCode == 0) {
-                loginView.OnLoginError("Please enter Email");
-            } else if (loginCode == 1) {
-                loginView.OnLoginError("Please enter A valid Email");
-            } else if (loginCode == 2) {
-                loginView.OnLoginError("Please enter Password");
-            } else if (loginCode == 3) {
-                loginView.OnLoginError("Please enter Password greater the 12 char");
-            } else {
-                UserList.getInstance().setCurrentUser(user);
-                UserList.getInstance().add(user);
-                UserList.getInstance().writeToFile();
-                loginView.OnLoginSuccess("Registration Successful");
-            }
+            loginView.OnLoginSuccess("login Successful");
+            activeUser = user;
         }
+        userList.add(user); // TODO: Make a separate registration method
     }
 }
