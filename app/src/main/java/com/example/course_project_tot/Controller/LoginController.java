@@ -25,7 +25,7 @@ public class LoginController implements ILoginController {
         } else if (loginCode == 2) {
             loginView.OnLoginError("Please enter Password");
         } else if (loginCode == 3) {
-            loginView.OnLoginError("Please enter Password greater the 12 char");
+            loginView.OnLoginError("Please enter Password greater than 6 char");
         } else {
             loginView.OnLoginSuccess("login Successful");
             activeUser = user;

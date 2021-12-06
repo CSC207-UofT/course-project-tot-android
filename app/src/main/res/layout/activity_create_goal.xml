@@ -6,15 +6,19 @@
                                                    android:layout_height="match_parent">
 
     <EditText
-            android:layout_width="238dp"
-            android:layout_height="150dp"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/editTextDescription"
-            android:hint="Description"
-            app:layout_constraintTop_toBottomOf="@+id/editTextName"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"/>
+        android:id="@+id/editTextDescription"
+        android:layout_width="238dp"
+        android:layout_height="150dp"
+        android:ems="10"
+        android:hint="Detailed Description"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        app:layout_constraintVertical_bias="0.05" />
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,14 +27,20 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintVertical_bias="0.085" app:layout_constraintHorizontal_bias="0.497"/>
+
     <Button
-            android:text="Create Goal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/createGoalButton"
-            android:onClick="createGoal" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.95"
-            app:layout_constraintVertical_bias="0.976"/>
+        android:id="@+id/createGoalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="createGoal"
+        android:text="Create Goal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,14 +51,20 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextDate" android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"/>
+
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editTextNumberHours"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:hint="Time (Hours)" app:layout_constraintTop_toBottomOf="@+id/editTextDescription"
-            app:layout_constraintVertical_bias="0.0"/>
+        android:id="@+id/editTextNumberHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Time (Hours)"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescription"
+        app:layout_constraintVertical_bias="0.122" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
