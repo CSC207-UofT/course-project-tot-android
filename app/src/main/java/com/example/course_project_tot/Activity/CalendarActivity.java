@@ -17,7 +17,6 @@ public class CalendarActivity extends AppCompatActivity {
     private LocalDate curDate;
 
     private LinearLayout scrollLinearLayout;
-    private Button find;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +36,11 @@ public class CalendarActivity extends AppCompatActivity {
                 updateGoals(curDate);
             }
         });
-        find = (Button) findViewById(R.id.button2);
-        find.setOnClickListener(view -> {
-            Intent intent = new Intent(CalendarActivity.this, ChartActivity.class);
-            startActivity(intent);
-        });
     }
 
     /**
      * Updates the list of goals for the current date.
+     *
      * @param date Date goals should be on.
      */
     public void updateGoals(LocalDate date) {
@@ -69,6 +64,7 @@ public class CalendarActivity extends AppCompatActivity {
 
     /**
      * On click listener for "Create Goals" button. Moves to the create goal activity.
+     *
      * @param view Object that triggered the event.
      */
     public void goToCreateGoal(View view) {
@@ -76,4 +72,10 @@ public class CalendarActivity extends AppCompatActivity {
         intent.putExtra("date", curDate);
         startActivity(intent);
     }
+
+    public void goToChart(View view) {
+        Intent intent = new Intent(this, ChartActivity.class);
+        startActivity(intent);
+    }
+
 }

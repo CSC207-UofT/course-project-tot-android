@@ -27,6 +27,18 @@
             android:layout_marginTop="148dp"
             app:layout_constraintVertical_bias="0.616" app:layout_constraintTop_toTopOf="parent"
             android:onClick="goToCreateGoal"/>
+    <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stats"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.094"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.699"
+            android:onClick="goToChart"/>
     <ScrollView
             android:layout_width="409dp"
             android:layout_height="203dp"
@@ -37,17 +49,6 @@
                       android:orientation="vertical" android:id="@+id/ll"/>
     </ScrollView>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stats"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.699" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,10 @@
 package com.example.course_project_tot.Activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.course_project_tot.CreateGoalPresenter;
 import com.example.course_project_tot.FromJSon;
 import com.example.course_project_tot.R;
 import com.jjoe64.graphview.GraphView;
@@ -20,9 +19,11 @@ public class ChartActivity extends AppCompatActivity {
     // for our graph view.
     GraphView graphView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_chart);
 
         graphView = findViewById(R.id.idGraphView);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
@@ -30,8 +31,7 @@ public class ChartActivity extends AppCompatActivity {
             series.appendData(d, true, 30);
         }
 
-
-        graphView.setTitle("My Graph View");
+        graphView.setTitle("My Line Chart");
 
 
         graphView.setTitleColor(R.color.purple_200);
