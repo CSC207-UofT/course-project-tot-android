@@ -13,6 +13,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 
+
 public class ChartActivity extends AppCompatActivity {
 
     // creating a variable
