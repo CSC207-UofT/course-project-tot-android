@@ -31,18 +31,22 @@ public class ChartActivity extends AppCompatActivity {
         }
 
 
-        graphView.setTitle("My Graph View");
+        graphView.setTitle("My Line Graph");
 
 
         graphView.setTitleColor(R.color.purple_200);
 
 
-        graphView.setTitleTextSize(18);
+        graphView.setTitleTextSize(70);
 
         // on below line we are adding
         // data series to our graph view.
         graphView.addSeries(series);
 
      }
+    public void goToCalendar(View view) {
+        Intent intent = new Intent(this, CalendarActivity.class);
+        startActivity(intent);
+    }
 
 }
