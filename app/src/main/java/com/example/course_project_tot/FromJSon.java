@@ -16,7 +16,7 @@ public class FromJSon {
 
         Gson gson = new GsonBuilder().create();
 
-        String fileName = "src/main/resources/users.json";
+        String fileName = "data/user/0/com.example.course_project_tot/files/users.json";
         Path path = new File(fileName).toPath();
 
         try (Reader reader = Files.newBufferedReader(path,

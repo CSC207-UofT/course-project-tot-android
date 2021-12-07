@@ -21,5 +21,6 @@
         <activity android:name="com.example.course_project_tot.Activity.CalendarActivity"/>
         <activity android:name="com.example.course_project_tot.Activity.CreateGoalActivity"/>
         <activity android:name="com.example.course_project_tot.Activity.PomodoroActivity"/>
+        <activity android:name="com.example.course_project_tot.Activity.ChartActivity"/>
     </application>
 </manifest>
