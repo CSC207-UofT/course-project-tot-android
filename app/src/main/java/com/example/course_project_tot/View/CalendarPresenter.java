@@ -1,4 +1,4 @@
-package com.example.course_project_tot;
+package com.example.course_project_tot.View;
 
 import android.content.Context;
 

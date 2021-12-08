@@ -7,7 +7,7 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.course_project_tot.Controller.LoginController;
-import com.example.course_project_tot.Goal;
+import com.example.course_project_tot.Modele.Goal;
 import com.example.course_project_tot.R;
 
 import java.time.LocalDate;

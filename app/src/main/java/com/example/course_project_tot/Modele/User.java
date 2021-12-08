@@ -3,8 +3,6 @@ package com.example.course_project_tot.Modele;
 import android.text.TextUtils;
 import android.util.Patterns;
 
-import com.example.course_project_tot.Goal;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashMap;

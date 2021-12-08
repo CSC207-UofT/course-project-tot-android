@@ -7,8 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.course_project_tot.Activity.CalendarActivity;
-import com.example.course_project_tot.CreateGoalPresenter;
+import com.example.course_project_tot.View.CreateGoalPresenter;
 import com.example.course_project_tot.R;
 
 import java.time.LocalDate;

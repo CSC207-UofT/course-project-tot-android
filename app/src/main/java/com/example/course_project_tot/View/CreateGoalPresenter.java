@@ -1,7 +1,8 @@
-package com.example.course_project_tot;
+package com.example.course_project_tot.View;
 
 import android.widget.EditText;
 import com.example.course_project_tot.Controller.LoginController;
+import com.example.course_project_tot.Modele.Goal;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

@@ -1,7 +1,6 @@
-package com.example.course_project_tot;
+package com.example.course_project_tot.Modele;
 
 import java.time.LocalDate;
-import java.util.Calendar;
 import java.util.UUID;
 
 public class Goal{
